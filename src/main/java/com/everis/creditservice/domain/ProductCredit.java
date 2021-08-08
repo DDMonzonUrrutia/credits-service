@@ -24,4 +24,4 @@ public @Data class ProductCredit {
 		this.typeProductCredit = typeProductCredit;
 		this.codigo = codigo;
 	}
-}
+} 
