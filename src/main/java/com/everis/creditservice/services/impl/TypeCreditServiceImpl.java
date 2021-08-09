@@ -32,7 +32,7 @@ public class TypeCreditServiceImpl implements TypeCreditService{
 	}
 
 	@Override
-	public Mono<Void> deletexId(String id) {
+	public Mono<Void> deleteById(String id) {
 	return typeProductRepo.deleteById(id);
 	}
 

@@ -13,7 +13,7 @@ public interface TypeCreditService {
 
 	Mono<TypeProductCredit> findById(String id);
 
-	Mono<Void> deletexId(String id);
+	Mono<Void> deleteById(String id);
 
 	Mono<Void> delete(TypeProductCredit typeProductCredit);
 }

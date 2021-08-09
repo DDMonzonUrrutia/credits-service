@@ -18,7 +18,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 
-@RequestMapping("typecred")
+@RequestMapping("/credit-types")
 @RestController
 public class TypeCreditController {
 	
@@ -36,18 +36,18 @@ public class TypeCreditController {
 	}
 
 	@PostMapping
-	public Mono<TypeProductCredit> save(@RequestBody TypeProductCredit typecredt) {
-		return typeCreditService.save(typecredt);
+	public Mono<TypeProductCredit> save(@RequestBody TypeProductCredit typeProductCredit) {
+		return typeCreditService.save(typeProductCredit);
 	}
 
 	@PutMapping
-	public Mono<TypeProductCredit> update(@RequestBody TypeProductCredit typecredt) {
-		return typeCreditService.save(typecredt);
+	public Mono<TypeProductCredit> update(@RequestBody TypeProductCredit typeProductCredit) {
+		return typeCreditService.save(typeProductCredit);
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<Void> eliminarProducto(@PathVariable String id){
-		return typeCreditService.deletexId(id);
+	public Mono<Void> deleteProductType(@PathVariable String id){
+		return typeCreditService.deleteById(id);
 	}
 
 }
