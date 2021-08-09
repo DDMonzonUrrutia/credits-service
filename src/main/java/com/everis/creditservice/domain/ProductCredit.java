@@ -14,14 +14,14 @@ public @Data class ProductCredit {
 	@Id
 	private String id;
 	private String description;
-	private double interes;
+	private double interest;
 	private TypeProductCredit typeProductCredit;
-	private Integer codigo;
-	public ProductCredit(String description, double interes, TypeProductCredit typeProductCredit, Integer codigo) {
+	private Integer code;
+	public ProductCredit(String description, double interest, TypeProductCredit typeProductCredit, Integer code) {
 		super();
 		this.description = description;
-		this.interes = interes;
+		this.interest = interest;
 		this.typeProductCredit = typeProductCredit;
-		this.codigo = codigo;
+		this.code = code;
 	}
 } 

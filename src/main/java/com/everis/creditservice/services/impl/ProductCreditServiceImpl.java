@@ -17,32 +17,32 @@ public class ProductCreditServiceImpl implements ProductCreditService{
 	
 	
 	@Autowired
-	private ProductCreditRepository prodcredRepo;
+	private ProductCreditRepository productCreditRepository;
 	
 	@Override
 	public Mono<ProductCredit> save(ProductCredit productCredit) {
-		return this.prodcredRepo.save(productCredit);
+		return this.productCreditRepository.save(productCredit);
 	
 	}
 
 	@Override
 	public Flux<ProductCredit> findAll() {
-		return this.prodcredRepo.findAll();
+		return this.productCreditRepository.findAll();
 	}
 
 	@Override
 	public Mono<ProductCredit> findById(String id) {
-		return this.prodcredRepo.findById(id);
+		return this.productCreditRepository.findById(id);
 	}
  
 	@Override
-	public Mono<Void> deletexId(String id) {
-		return this.prodcredRepo.deleteById(id);
+	public Mono<Void> deleteById(String id) {
+		return this.productCreditRepository.deleteById(id);
 	}
 
 	@Override
 	public Mono<Void> delete(ProductCredit productCredit) {
-		return this.prodcredRepo.delete(productCredit);
+		return this.productCreditRepository.delete(productCredit);
 	}
 
 

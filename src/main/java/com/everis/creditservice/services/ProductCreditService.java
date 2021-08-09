@@ -10,7 +10,7 @@ public interface ProductCreditService {
 
 	Mono<ProductCredit> findById(String id);
 
-	Mono<Void> deletexId(String id);
+	Mono<Void> deleteById(String id);
 
 	Mono<Void> delete(ProductCredit productCredit);
 }

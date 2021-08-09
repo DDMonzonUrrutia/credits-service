@@ -15,36 +15,36 @@ import com.everis.creditservice.services.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RequestMapping("productcredt")
+@RequestMapping("/product-credits")
 @RestController
 public class ProductCreditController {
 	
 	@Autowired
-	private  ProductCreditService prodcredtserv;
+	private  ProductCreditService productCreditService;
 
 	@GetMapping("/list")
 	public Flux<ProductCredit> findAll() {
-		return prodcredtserv.findAll();
+		return productCreditService.findAll();
 	}
 
 	@GetMapping("/{id}")
 	public Mono<ProductCredit> finById(@PathVariable String id) {
-		return prodcredtserv.findById(id);
+		return productCreditService.findById(id);
 	}
 
 	@PostMapping
-	public Mono<ProductCredit> save(@RequestBody ProductCredit prodbank) {
-		return prodcredtserv.save(prodbank);
+	public Mono<ProductCredit> save(@RequestBody ProductCredit productCredit) {
+		return productCreditService.save(productCredit);
 	}
 
 	@PutMapping
-	public Mono<ProductCredit> update(@RequestBody ProductCredit prodbank) {
-		return prodcredtserv.save(prodbank);
+	public Mono<ProductCredit> update(@RequestBody ProductCredit productCredit) {
+		return productCreditService.save(productCredit);
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<Void> eliminarProducto(@PathVariable String id){
-		return prodcredtserv.deletexId(id);
+	public Mono<Void> deleteProduct(@PathVariable String id){
+		return productCreditService.deleteById(id);
 	}
 
 }
